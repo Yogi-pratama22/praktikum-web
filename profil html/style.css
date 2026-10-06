@@ -1,7 +1,499 @@
+/* =========================
+   RESET & DASAR
+========================= */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2937;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    height: 70px;
+    padding: 0 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+.logo span {
+    color: #06b6d4;
+}
+
+.menu {
+    display: flex;
+    gap: 28px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #374151;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #2563eb;
+}
+
+
+/* =========================
+   HERO / BERANDA
+========================= */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+    padding: 80px 10%;
+
+    background: linear-gradient(
+        135deg,
+        #eff6ff,
+        #ffffff,
+        #ecfeff
+    );
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.label {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 7vw, 75px);
+    line-height: 1.05;
+    color: #111827;
+    margin: 15px 0;
+}
+
+.hero h1 span {
+    display: block;
+    color: #2563eb;
+}
+
+.hero h2 {
+    font-size: 24px;
+    color: #4b5563;
+    margin-bottom: 20px;
+}
+
+.deskripsi {
+    max-width: 600px;
+    color: #6b7280;
+    font-size: 17px;
+}
+
+
+/* =========================
+   FOTO PROFIL
+========================= */
+
+.foto-wrapper {
+    flex-shrink: 0;
+}
+
+.foto {
+    width: 340px;
+    height: 340px;
+
+    padding: 10px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #06b6d4
+    );
+
+    box-shadow: 0 25px 60px rgba(37, 99, 235, 0.25);
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+    border: 8px solid white;
+}
+
+
+/* =========================
+   TOMBOL
+========================= */
+
+.tombol {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn.utama {
+    background: #2563eb;
+    color: white;
+}
+
+.btn.utama:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(37, 99, 235, 0.3);
+}
+
+.btn.outline {
+    color: #2563eb;
+    border: 2px solid #2563eb;
+}
+
+.btn.outline:hover {
+    color: white;
+    background: #2563eb;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+    padding: 100px 10%;
+}
+
+.abu {
+    background: #f8fafc;
+}
+
+.judul {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.judul p {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.judul h2 {
+    font-size: 38px;
+    color: #111827;
+    margin-top: 5px;
+}
+
+
+/* =========================
+   TENTANG SAYA
+========================= */
+
+.tentang {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+    align-items: center;
+}
+
+.tentang-text h3 {
+    font-size: 27px;
+    color: #111827;
+    margin-bottom: 20px;
+}
+
+.tentang-text p {
+    color: #6b7280;
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   DATA DIRI
+========================= */
+
+.data-diri {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.data {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 18px;
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+.data:hover {
+    transform: translateX(8px);
+
+    border-color: #93c5fd;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #eff6ff;
+
+    font-size: 25px;
+}
+
+.data small {
+    display: block;
+
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.data strong {
+    display: block;
+
+    color: #111827;
+}
+
+
+/* =========================
+   PENDIDIKAN / TIMELINE
+========================= */
+
+.timeline {
+    max-width: 900px;
+
+    margin: auto;
+
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 140px;
+    top: 0;
+    bottom: 0;
+
+    width: 3px;
+
+    background: #bfdbfe;
+}
+
+.timeline-item {
+    display: grid;
+
+    grid-template-columns: 140px 1fr;
+
+    gap: 35px;
+
+    margin-bottom: 45px;
+
+    position: relative;
+}
+
+.tahun {
+    color: #2563eb;
+
+    font-weight: bold;
+
+    text-align: right;
+}
+
+.timeline-card {
+    padding: 25px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.06);
+
+    position: relative;
+}
+
+.timeline-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 14px;
+    height: 14px;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    left: -42px;
+    top: 28px;
+
+    border: 4px solid #dbeafe;
+}
+
+.timeline-card h3 {
+    color: #111827;
+    margin-bottom: 5px;
+}
+
+.timeline-card p {
+    color: #2563eb;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+.timeline-card span {
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   KEAHLIAN
+========================= */
+
+.skill-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.skill-card {
+    padding: 30px;
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.skill-icon {
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    color: #111827;
+
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    color: #6b7280;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   PROGRESS BAR
+========================= */
 
 .progress {
     width: 100%;
+
     height: 8px;
 
     background: #e5e7eb;
@@ -26,8 +518,6 @@
         );
 }
 
-/* Tingkat kemampuan */
-
 .elektronika {
     width: 80%;
 }
@@ -50,4 +540,351 @@
     font-size: 13px;
 
     font-weight: bold;
+}
+
+
+/* =========================
+   MINAT / HOBI
+========================= */
+
+.hobi-grid {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.hobi {
+    padding: 30px;
+
+    text-align: center;
+
+    background: white;
+
+    border-radius: 15px;
+
+    border: 1px solid #e5e7eb;
+
+    transition: 0.3s;
+}
+
+.hobi:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.hobi > div {
+    font-size: 40px;
+}
+
+.hobi h3 {
+    color: #111827;
+
+    margin: 12px 0 7px;
+}
+
+.hobi p {
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   KONTAK
+========================= */
+
+.kontak {
+    padding: 100px 20px;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1d4ed8,
+            #2563eb,
+            #0891b2
+        );
+}
+
+.kontak-content {
+    max-width: 700px;
+
+    margin: auto;
+}
+
+.kontak .label {
+    color: #bfdbfe;
+}
+
+.kontak h2 {
+    font-size: 42px;
+
+    margin: 8px 0 15px;
+}
+
+.kontak-content > p:not(.label) {
+    color: #dbeafe;
+}
+
+.kontak-list {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-top: 35px;
+}
+
+.kontak-list a {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 20px;
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 8px;
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.kontak-list a:hover {
+    background: white;
+
+    color: #2563eb;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 45px 20px;
+
+    text-align: center;
+
+    background: #111827;
+
+    color: white;
+}
+
+footer h3 {
+    color: #60a5fa;
+
+    font-size: 22px;
+}
+
+footer > p {
+    color: #9ca3af;
+
+    margin: 5px 0 20px;
+}
+
+.social {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-bottom: 25px;
+}
+
+.social a {
+    color: #d1d5db;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.social a:hover {
+    color: #60a5fa;
+}
+
+.copyright {
+    border-top: 1px solid #374151;
+
+    padding-top: 20px;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .hero {
+        padding: 70px 6%;
+    }
+
+    .skill-grid,
+    .hobi-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* =========================
+   RESPONSIVE HP
+========================= */
+
+@media (max-width: 700px) {
+
+    /* NAVBAR */
+
+    .navbar {
+        height: auto;
+
+        padding: 15px 20px;
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .menu {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .menu a {
+        font-size: 13px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        flex-direction: column-reverse;
+
+        text-align: center;
+
+        padding: 70px 20px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero h2 {
+        font-size: 21px;
+    }
+
+    .tombol {
+        justify-content: center;
+    }
+
+    .foto {
+        width: 250px;
+        height: 250px;
+    }
+
+
+    /* SECTION */
+
+    .section {
+        padding: 70px 20px;
+    }
+
+    .judul h2 {
+        font-size: 30px;
+    }
+
+
+    /* TENTANG */
+
+    .tentang {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    /* TIMELINE */
+
+    .timeline::before {
+        display: none;
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+    .tahun {
+        text-align: left;
+    }
+
+    .timeline-card::before {
+        display: none;
+    }
+
+
+    /* SKILL */
+
+    .skill-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* HOBI */
+
+    .hobi-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* KONTAK */
+
+    .kontak {
+        padding: 70px 20px;
+    }
+
+    .kontak h2 {
+        font-size: 34px;
+    }
+
+    .kontak-list {
+        flex-direction: column;
+    }
+
+    .kontak-list a {
+        justify-content: center;
+    }
 }
